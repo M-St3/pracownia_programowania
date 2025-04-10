@@ -1,0 +1,1532 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+/*
+//Zad.1.2.1
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}
+//Zad.1.2.2
+int main()
+{
+    printf("Bardzo d³ulgi napis\n");
+    return 0;
+}
+
+//Zad.1.2.3
+int main()
+{
+    printf("Napis zawierajacy rozne dziwne znaczki // \\\\ $ & %%");
+    return 0;
+}
+
+//Zad.1.2.4
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("%d",a);
+    return 0;
+}
+//Zad.1.2.5
+int main()
+{
+    float a;
+    scanf("%f", &a);
+    printf("%f",a);
+    return 0;
+}
+
+//Zad.1.2.6
+int main()
+{
+    int a;
+    int b;
+    int c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d\n%d\n%d\n",a,b,c);
+    return 0;
+}
+
+//Zad.1.2.7
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("%d\n",a+1);
+    return 0;
+}
+
+//Zad.1.2.8
+int main()
+{
+    int a;
+    int b;
+    int c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d\n%d\n%d\n",a,b,c);
+    int srednia = ((a +  b +  c)/3);
+    printf("%d",srednia);
+
+    return 0;
+}
+
+//Zad.1.2.9
+int main()
+{
+    float x;
+    scanf("%f", &x);
+    printf("%f", sqrt(x));
+    return 0;
+
+}
+
+//Zad.1.2.10
+int main()
+{
+    float x;
+    scanf("%f", &x);
+
+    printf("%f", fabs(x));
+    return 0;
+}
+
+//Zad.1.2.11
+int main()
+{
+    float a;
+    scanf("%f", &a);
+    printf("%0.2f", a);
+    return 0;
+}
+
+//Zad.1.2.12
+int main()
+{
+    float a;
+    scanf("%f", &a);
+    printf("%0.1e", a);
+    return 0;
+}
+
+//Zad.1.3.1
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    if(a<0)
+    {
+        printf("%d", -a);
+    }
+    else
+    {
+        printf("%d", a);
+    }
+    return 0;
+}
+
+//Zad.1.3.2
+
+
+//Zad.1.2.3
+int main()
+{
+    int a;
+    int b;
+    int c;
+    scanf("%d %d %d", &a,&b,&c);
+    if(a>b && a>c)
+    {
+        printf("Najwieksza wartosc to:%d", a);
+    }
+    else if(b>a && b>c)
+    {
+        printf("Najwieksza wartosc to:%d", b);
+    }
+    else if(c>b && c>a)
+    {
+        printf("Najwieksza wartosc to:%d", c);
+    }
+    else if(a==b && a==c && c==b)
+    {
+        printf("Liczby sa sobie rowne");
+    }
+    else if(b==c && a>c)
+    {
+        printf("Najwieksza wartosc to:%d", a);
+    }
+    else if(b==a && c>a)
+    {
+        printf("Najwieksza wartosc to:%d", c);
+    }
+    else if(a==c && b>c)
+    {
+        printf("Najwieksza wartosc to:%d", b);
+    }
+    else if(b==c && a<c)
+    {
+        printf("Najwieksza wartosc to:%d", b);
+    }
+    else if(b==a && c<a)
+    {
+        printf("Najwieksza wartosc to:%d", b);
+    }
+    else if(a==c && b<c)
+    {
+        printf("Najwieksza wartosc to:%d", c);
+    }
+    return 0;
+}
+
+//Zad.1.3.4
+int main()
+{
+    int a;
+    int b;
+    scanf("%d %d", &a, &b);
+    if(abs(a)>abs(b))
+    {
+        printf("Naajwieksza wartosc to: %d", abs(a));
+    }
+    if(abs(a)<abs(b))
+    {
+        printf("Naajwieksza wartosc to: %d", abs(b));
+    }
+    if(abs(a)==abs(b))
+    {
+        printf("Liczby sa rowne ziemniorze\n%d", abs(b));
+    }
+    return 0;
+}
+
+//Zad.1.3.5
+int main()
+{
+    int w;
+    scanf("%d",&w);
+    if(w == 0)
+    {
+        int a;
+        int h;
+        int pole1;
+
+        printf("podaj dlugosc boku i wysokosci:\n");
+        scanf("%d %d", &a,&h);
+
+        pole1 = (a*h)/2;
+        printf("Pole to:%d",pole1);
+    }
+    else if(w == 1)
+    {
+        int a;
+        int b;
+        int c;
+        int p;
+        int pole2;
+
+        printf("podaj dlugosc bokow:\n");
+        scanf("%d %d %d", &a,&b,&c);
+
+        p = (a+b+c)/2;
+
+        pole2 = sqrt(p*((p-a)*(p-b)*(p-c)));
+        printf("Pole to: %d",pole2);
+    }
+    return 0;
+}
+
+//Zad.1.3.6
+int main()
+{
+    float a1, b1, c1;
+    float a2, b2, c2;
+    printf("Podaj wspolczynniki pierwszego rownania (a1 b1 c1): \n");
+    scanf("%f %f %f", &a1, &b1, &c1);
+
+    printf("Podaj wspolczynniki drugiego rownania (a2 b2 c2): \n");
+    scanf("%f %f %f", &a2, &b2, &c2);
+
+    float W = a1 * b2 -a2 *b1;
+    float Wx = c1 * b2 -c2 *b1;
+    float Wy = a1 * c2 -a2 *c1;
+    printf("%f\n%f\n%f\n",W, Wx, Wy);
+
+    if(W != 0) //rozwi¹zanie dla uk³adu z jednym rozwi¹zaniem
+    {
+        float x = Wx/W;
+        float y = Wy/W;
+        printf("Rozwiazanie ukladu:\n");
+        printf("%f %f", x,y);
+    }
+    else
+    {
+        if(Wx== 0 && Wy== 0)
+        {
+            printf("Uklad ma tylko jedno rozwiazanie.\n");
+        }
+        else
+        {
+            printf("Uklad nie ma rozwiazania.\n");
+        }
+    }
+    return 0;
+}
+
+//Zad.1.3.7
+int main()
+{
+    float a;
+    float b;
+    float c;
+    scanf("%f %f %f", &a,&b,&c);
+    printf("FUNKCJA:\n%dx^2+%dx+%d\n", a,b,c);
+    float delta;
+    delta = (b*b)-4*(a*c);
+    printf("DELTA:\n%f\n",delta);
+    if(delta>0)
+    {
+        float x1;
+        float x2;
+        printf("Obliczamy miejsca zerowe\n");
+        x1 = (-b-sqrt(delta))/(2*a);
+        x2 = (-b+sqrt(delta))/(2*a);
+        printf("Miejsca zerowe to:\n%f i %f\n", x1,x2);
+    }
+    else if(delta==0)
+    {
+        float x0;
+        printf("Obliczamy miejsce zerowe\n");
+        x0 = -b/2*a;
+        printf("Miejsce zerowe to:\n%f\n", x0);
+    }
+    else
+    {
+        printf("BRAK MIEJSC ZEROWYCH\n");
+    }
+    return 0;
+}
+
+//Zad.1.3.8
+int main()
+{
+    int w;
+    scanf("%d",&w);
+    if(w==1)
+    {
+        printf("GRATULACJE U¯YTKOWNIKU WYGRA£EŒ NOWEGO IPHONE 7S\nPodaj wymiary kwadratu\n");
+        float a;
+        scanf("%f",&a);
+        float pole1;
+        pole1 = a*a;
+        printf("Pole to: %0.2f",pole1);
+    }
+    else if(w==2)
+    {
+        printf("GRATULACJE U¯YTKOWNIKU WYGRA£EŒ NOWEGO IPHONE 7S\nPodaj wymiary prostokata\n");
+        float  a;
+        float  b;
+        scanf("%f %f",&a,&b);
+        float pole2;
+        pole2 = a*b;
+        printf("Pole to: %0.2f",pole2);
+    }
+    else if(w==3)
+    {
+        printf("GRATULACJE U¯YTKOWNIKU WYGRA£EŒ NOWEGO IPHONE 7S\nPodaj wymiary trojkata\n");
+        float  a;
+        float  b;
+        float  c;
+        float  p;
+        float pole3;
+        scanf("%f %f %f", &a,&b,&c);
+
+        p = (a+b+c)/2;
+
+        pole3 = sqrt(p*((p-a)*(p-b)*(p-c)));
+        printf("Pole to: %0.2f",pole3);
+    }
+    return 0;
+}
+*/
+/*
+//Zad.1.4.1
+int main()
+{
+    int n;
+    int m;
+
+    scanf("%d %d", &n,&m);
+    for(int i=0;i*n<m;i++)
+    {
+        int wyniki;
+        wyniki = i*n;
+        printf("%d\n",wyniki);
+    }
+    return 0;
+
+# 1.4.2
+int main() {
+    int m, n;
+    printf("Podaj liczby m i n: ");
+    scanf("%d %d", &m, &n);
+
+    printf("Pierwsze %d wielokrotności %d:\n", n, m);
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", m * i);
+    }
+    printf("\n");
+    return 0;
+}
+
+# 1.4.3
+int main() {
+    int n, m, k;
+    printf("Podaj liczby n, m i k: ");
+    scanf("%d %d %d", &n, &m, &k);
+
+    printf("Liczby podzielne przez %d w zakresie [%d, %d]:\n", n, m, k);
+    for (int i = m; i <= k; i++) {
+        if (i % n == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
+# 1.4.4
+int main() {
+    int n;
+    printf("Podaj liczbę n: ");
+    scanf("%d", &n);
+
+    for (int i = n; i >= 0; i--) {
+        printf("%d ", i);
+    }
+    printf("\n");
+    return 0;
+}
+# 1.4.5
+int main() {
+    int n, suma = 0;
+    printf("Podaj liczbę n: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i <= n; i++) {
+        suma += i * i;
+    }
+    printf("Suma kwadratów od 0 do %d wynosi: %d\n", n, suma);
+    return 0;
+}
+# 1.4.6
+int main() {
+    int n;
+    int silnia = 1;
+
+    printf("Podaj liczbę n: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Silnia nie jest zdefiniowana dla liczb ujemnych.\n");
+        return 1;
+    }
+
+    for (int i = 2; i <= n; i++) {
+        silnia *= i;
+    }
+
+    printf("%d! = %d\n", n, silnia);
+    return 0;
+}
+# 1.4.7
+int main() {
+    int n, m;
+    printf("Podaj liczby n i m (n < m): ");
+    scanf("%d %d", &n, &m);
+
+    for (int i = n; i < m; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+    return 0;
+}
+# 1.4.14
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int a = 1; a < n; a++) {
+        for (int b = a; b < n; b++) {
+            for (int c = b; c < n; c++) {
+                if (a * a + b * b == c * c) {
+                    printf("(%d, %d, %d)\n", a, b, c);
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+# 2.2.1
+int main() {
+    int n;
+    scanf("%d", &n);
+    if (n < 0)
+        printf("%d\n", -n);
+    else
+        printf("%d\n", n);
+    return 0;
+}
+# 2.2.2
+int main() {
+    int n;
+    scanf("%d", &n);
+    int wynik = 1;
+
+    for (int i = 1; i <= n; i++) {
+        wynik *= i;
+    }
+
+    printf("%d\n", wynik);
+    return 0;
+}
+# 2.2.3
+int main() {
+    int n;
+    scanf("%d", &n);
+    int k = 0;
+
+    while (k * (k + 1) / 2 <= n) {
+        k++;
+    }
+
+    printf("%d\n", k - 1);
+    return 0;
+}
+# 2.2.4
+int potega2(int n) {
+    int wynik = 1;
+    for (int i = 0; i < n; i++) {
+        wynik *= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", potega2(n));
+    return 0;
+}
+# 2.2.5
+double potega2(int n) {
+    double wynik = 1.0;
+    if (n >= 0) {
+        for (int i = 0; i < n; i++) wynik *= 2;
+    } else {
+        for (int i = 0; i < -n; i++) wynik /= 2;
+    }
+    return wynik;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%f\n", potega2(n));
+    return 0;
+}
+# 2.2.6
+int min(int x, int y) {
+    return (x < y) ? x : y;
+}
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d\n", min(a, b));
+    return 0;
+}
+# 2.2.7
+double potega(int x, int m) {
+    double wynik = 1.0;
+    if (m >= 0) {
+        for (int i = 0; i < m; i++) wynik *= x;
+    } else {
+        for (int i = 0; i < -m; i++) wynik /= x;
+    }
+    return wynik;
+}
+
+int main() {
+    int x, m;
+    scanf("%d %d", &x, &m);
+    if (x == 0 && m <= 0) {
+        printf("Nieokreślone\n");
+    } else {
+        printf("%f\n", potega(x, m));
+    }
+    return 0;
+}
+# 2.2.8
+int pierwiastek(int n) {
+    int i = 0;
+    while (i * i <= n) {
+        i++;
+    }
+    return i - 1;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", pierwiastek(n));
+    return 0;
+}
+// 2.2.9
+int pierwiastek(int x) {
+    int i = 0;
+    while (i * i <= x) i++;
+    return i - 1;
+}
+
+int sumaPierwiastkow(int m, int n) {
+    return pierwiastek(m) + pierwiastek(n);
+}
+
+int main() {
+    int m, n;
+    scanf("%d %d", &m, &n);
+    printf("%d\n", sumaPierwiastkow(m, n));
+    return 0;
+}
+// 2.2.10
+int sumaDzielnikow(int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) suma += i;
+    }
+    return suma;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", sumaDzielnikow(n));
+    return 0;
+}
+// 2.2.11
+int pierwiastek(int x) {
+    int i = 0;
+    while (i * i <= x) i++;
+    return i - 1;
+}
+
+int sumaPierwiastkowDoN(int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; i++) {
+        suma += pierwiastek(i);
+    }
+    return suma;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", sumaPierwiastkowDoN(n));
+    return 0;
+}
+// 2.2.12
+int pierwiastek(int x) {
+    int i = 0;
+    while (i * i <= x) i++;
+    return i - 1;
+}
+
+int sumaPierwiastkowDoMN(int n, int m) {
+    int suma = 0;
+    for (int i = 1; i <= n * m; i++) {
+        suma += pierwiastek(i);
+    }
+    return suma;
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("%d\n", sumaPierwiastkowDoMN(n, m));
+    return 0;
+}
+// 2.2.13
+void rozkladNaKwadraty(int n) {
+    for (int a = 1; a * a <= n; a++) {
+        for (int b = a; b * b <= n; b++) {
+            if (a * a + b * b == n) {
+                printf("%d^2 + %d^2 = %d\n", a, b, n);
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    rozkladNaKwadraty(n);
+    return 0;
+}
+// 2.2.14
+void rozkladUnikalny(int n) {
+    for (int a = 1; a * a <= n; a++) {
+        for (int b = a; b * b <= n; b++) {
+            if (a * a + b * b == n) {
+                printf("%d^2 + %d^2 = %d\n", a, b, n);
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    rozkladUnikalny(n);
+    return 0;
+}
+// 2.2.15
+void rozklad3Kwadraty(int n) {
+    for (int a = 1; a * a <= n; a++) {
+        for (int b = a; b * b <= n; b++) {
+            for (int c = b; c * c <= n; c++) {
+                if (a * a + b * b + c * c == n) {
+                    printf("%d^2 + %d^2 + %d^2 = %d\n", a, b, c, n);
+                }
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    rozklad3Kwadraty(n);
+    return 0;
+}
+// 2.2.16
+void rozklad4Kwadraty(int n) {
+    for (int a = 0; a * a <= n; a++) {
+        for (int b = a; a*a + b*b <= n; b++) {
+            for (int c = b; a*a + b*b + c*c <= n; c++) {
+                for (int d = c; a*a + b*b + c*c + d*d <= n; d++) {
+                    if (a*a + b*b + c*c + d*d == n) {
+                        printf("%d^2 + %d^2 + %d^2 + %d^2 = %d\n", a, b, c, d, n);
+                    }
+                }
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    rozklad4Kwadraty(n);
+    return 0;
+}
+// 2.2.17
+int licznik = 0;
+
+void funkcja() {
+    licznik++;
+    printf("Liczba wywołań: %d\n", licznik);
+}
+
+int main() {
+    funkcja();
+    funkcja();
+    funkcja();
+    return 0;
+}
+// 2.2.18
+void pseudo(double x0, int ile) {
+    double x = x0;
+    for (int i = 0; i < ile; i++) {
+        printf("%f\n", x);
+        x = 1 - x * x;
+    }
+}
+
+int main() {
+    double x0;
+    int ile;
+    scanf("%lf %d", &x0, &ile);
+    pseudo(x0, ile);
+    return 0;
+}
+// 2.2.19
+int suma = 0;
+
+int sumaDotychczasowa(int x) {
+    suma += x;
+    return suma;
+}
+
+int main() {
+    int x;
+    while (scanf("%d", &x) == 1) {
+        printf("Suma: %d\n", sumaDotychczasowa(x));
+    }
+    return 0;
+}
+// 2.2.20
+int silnia(int n) {
+    if (n <= 1) return 1;
+    return n * silnia(n - 1);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", silnia(n));
+    return 0;
+}
+// 2.2.21
+int ciag(int n) {
+    if (n == 0) return 1;
+    return 2 * ciag(n - 1) + 5;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", ciag(n));
+    return 0;
+}
+// 2.2.22
+int ciag(int n) {
+    if (n == 0 || n == 1) return 1;
+    return ciag(n - 1) + 2 * ciag(n - 2) + 3;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", ciag(n));
+    return 0;
+}
+// 2.2.23
+int fib(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", fib(n));
+    return 0;
+}
+// 2.2.24
+int ciag(int n) {
+    if (n == 0 || n == 1) return 1;
+    if (n == 2) return 2;
+    return ciag(n - 1) + ciag(n - 2) + ciag(n - 3);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", ciag(n));
+    return 0;
+}
+// 2.2.25
+int ciag(int n) {
+    if (n == 0 || n == 1) return 1;
+    if (n % 2 == 0) // parzyste
+        return ciag(n - 1) + n;
+    else            // nieparzyste
+        return ciag(n - 1) * n;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("a_%d = %d\n", n, ciag(n));
+    return 0;
+}
+// 2.2.26
+int ciag(int n) {
+    if (n == 0 || n == 1 || n == 2)
+        return 1;
+    if (n == 3)
+        return ciag(1) + ciag(2);
+    return ciag(n - 1) + ciag(n - 3);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", ciag(n));
+    return 0;
+}
+// 2.2.27
+int f(int n, int m) {
+    if (n == 0) return m;
+    if (m == 0) return n;
+    return f(n - 1, m) + f(n, m - 1);
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("%d\n", f(n, m));
+    return 0;
+}
+// 2.2.28
+int min(int a, int b) {
+    return a < b ? a : b;
+}
+
+int f(int n, int m) {
+    if (n == 0) return m;
+    if (m == 0) return n;
+    return min(f(n - 1, m), f(n, m - 1)) + 1;
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("%d\n", f(n, m));
+    return 0;
+}
+// 2.2.29
+int nwd(int a, int b) {
+    if (b == 0) return a;
+    return nwd(b, a % b);
+}
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d\n", nwd(a, b));
+    return 0;
+}
+// 2.2.30
+int znajdz(int n, int m) {
+    if (n % m == 0)
+        return n;
+    return znajdz(n - 1, m);
+}
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("%d\n", znajdz(n, m));
+    return 0;
+}
+// 2.2.31
+int pierwiastek(int m) {
+    int i = 0;
+    while (i * i <= m) i++;
+    return i - 1;
+}
+
+int funkcja(int m, int n) {
+    return pierwiastek(m); // drugi argument ignorowany
+}
+
+int main() {
+    int m, n;
+    scanf("%d %d", &m, &n);
+    printf("%d\n", funkcja(m, n));
+    return 0;
+}
+// 2.2.32
+unsigned int maksimum(unsigned int a, unsigned int b, unsigned int c, unsigned int d, unsigned int e) {
+    unsigned int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    if (d > max) max = d;
+    if (e > max) max = e;
+    return max;
+}
+
+int main() {
+    unsigned int a, b, c, d, e;
+    scanf("%u %u %u %u %u", &a, &b, &c, &d, &e);
+    printf("Max: %u\n", maksimum(a, b, c, d, e));
+    return 0;
+}
+// 2.2.33
+unsigned int minimum(unsigned int a, unsigned int b, unsigned int c) {
+    unsigned int min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
+    return min;
+}
+
+int main() {
+    unsigned int a, b, c;
+    scanf("%u %u %u", &a, &b, &c);
+    printf("Min: %u\n", minimum(a, b, c));
+    return 0;
+}
+// 2.2.34
+int liczba_parzystych(int a, int b, int c) {
+    int count = 0;
+    if (a % 2 == 0) count++;
+    if (b % 2 == 0) count++;
+    if (c % 2 == 0) count++;
+    return count;
+}
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("Parzystych: %d\n", liczba_parzystych(a, b, c));
+    return 0;
+}
+// 2.2.35
+int liczba_dodatnich(int a, int b, int c) {
+    int count = 0;
+    if (a > 0) count++;
+    if (b > 0) count++;
+    if (c > 0) count++;
+    return count;
+}
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("Dodatnich: %d\n", liczba_dodatnich(a, b, c));
+    return 0;
+}
+// 2.2.36
+int dzieli_sie(int a, int b) {
+    if (b == 0) return 0; // false
+    return (a % b == 0);  // 1 (true) lub 0 (false)
+}
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    if (dzieli_sie(a, b))
+        printf("true\n");
+    else
+        printf("false\n");
+    return 0;
+}
+// 2.2.37
+double maksimum(double a, double b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    double x, y;
+    scanf("%lf %lf", &x, &y);
+    printf("Max: %.2lf\n", maksimum(x, y));
+    return 0;
+}
+// 2.2.38
+double minimum(double a, double b) {
+    return (a < b) ? a : b;
+}
+
+int main() {
+    double x, y;
+    scanf("%lf %lf", &x, &y);
+    printf("Min: %.2lf\n", minimum(x, y));
+    return 0;
+}
+// 2.2.39
+double srednia(double a, double b) {
+    return (a + b) / 2.0;
+}
+
+int main() {
+    double a, b;
+    scanf("%lf %lf", &a, &b);
+    printf("Średnia: %.2lf\n", srednia(a, b));
+    return 0;
+}
+// 2.2.40
+float srednia3(double a, double b, double c) {
+    return (float)((a + b + c) / 3.0);
+}
+
+int main() {
+    double a, b, c;
+    scanf("%lf %lf %lf", &a, &b, &c);
+    printf("Średnia: %.2f\n", srednia3(a, b, c));
+    return 0;
+}
+// 3.2.1
+int mniejsza(int *a, int *b) {
+    return (*a < *b) ? *a : *b;
+}
+
+int main() {
+    int x = 5, y = 8;
+    int wynik = mniejsza(&x, &y);
+    printf("Mniejsza z %d i %d to %d\n", x, y, wynik);
+    return 0;
+}
+// 3.2.2
+void mniejsza_do_zmiennej(int *a, int *b, int *wynik) {
+    *wynik = (*a < *b) ? *a : *b;
+}
+
+int main() {
+    int x = 12, y = 7, wynik;
+    mniejsza_do_zmiennej(&x, &y, &wynik);
+    printf("Mniejsza z %d i %d to %d\n", x, y, wynik);
+    return 0;
+}
+// 3.2.3
+void wpisz_mniejsza(int *a, int *b) {
+    *a = (*a < *b) ? *a : *b;
+}
+
+int main() {
+    int x = 10, y = 4;
+    wpisz_mniejsza(&x, &y);
+    printf("x po wpisaniu mniejszej wartości: %d\n", x);
+    return 0;
+}
+// 3.2.4
+void zamien_jesli_mniejszy(int *a, int *b) {
+    if (*b < *a) {
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+}
+
+int main() {
+    int x = 9, y = 3;
+    printf("Przed zamianą: x = %d, y = %d\n", x, y);
+    zamien_jesli_mniejszy(&x, &y);
+    printf("Po zamianie: x = %d, y = %d\n", x, y);
+    return 0;
+}
+// 3.2.5
+int suma_stalych(const int *a, const int *b) {
+    return *a + *b;
+}
+
+int main() {
+    int x = 2, y = 3;
+    int wynik = suma_stalych(&x, &y);
+    printf("Suma %d i %d to %d\n", x, y, wynik);
+    return 0;
+}
+// 3.2.6
+void przypisz(int n, int *w) {
+    *w = n;
+}
+
+int main() {
+    int x = 0;
+    przypisz(7, &x);
+    printf("Wartość x po przypisaniu: %d\n", x);
+    return 0;
+}
+// 3.2.7
+void zamien(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 3, y = 7;
+    zamien(&x, &y);
+    printf("x = %d, y = %d\n", x, y);
+    return 0;
+}
+// 3.2.8
+void zamien_polka(int *a, int &b) {
+    int temp = *a;
+    *a = b;
+    b = temp;
+}
+
+// C nie obsługuje referencji — wersja tylko wskaźnikowa:
+void zamien_wskaznikowa(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 2, y = 9;
+    zamien_wskaznikowa(&x, &y);
+    printf("x = %d, y = %d\n", x, y);
+    return 0;
+}
+// 3.2.9
+int* rezerwuj_int() {
+    return malloc(sizeof(int));
+}
+
+int main() {
+    int *wsk = rezerwuj_int();
+    *wsk = 10;
+    printf("*wsk = %d\n", *wsk);
+    free(wsk);
+    return 0;
+}
+// 3.2.10
+double* rezerwuj_double() {
+    return malloc(sizeof(double));
+}
+
+int main() {
+    double *wsk = rezerwuj_double();
+    *wsk = 3.14;
+    printf("*wsk = %lf\n", *wsk);
+    free(wsk);
+    return 0;
+}
+// 3.2.11
+int* rezerwuj_blok(int n) {
+    return malloc(n * sizeof(int));
+}
+
+int main() {
+    int *tab = rezerwuj_blok(3);
+    tab[0] = 1; tab[1] = 2; tab[2] = 3;
+    for (int i = 0; i < 3; i++) {
+        printf("tab[%d] = %d\n", i, tab[i]);
+    }
+    free(tab);
+    return 0;
+}
+// 3.2.12
+double* rezerwuj_blok_double(int n) {
+    return malloc(n * sizeof(double));
+}
+
+int main() {
+    double *tab = rezerwuj_blok_double(2);
+    tab[0] = 1.1; tab[1] = 2.2;
+    for (int i = 0; i < 2; i++) {
+        printf("tab[%d] = %.2f\n", i, tab[i]);
+    }
+    free(tab);
+    return 0;
+}
+// 3.2.13
+double funkcja(double (*f)(int), int x) {
+    return f(x);
+}
+
+double pierwiastek(int x) {
+    return sqrt(x);
+}
+
+int main() {
+    int liczba = 9;
+    printf("Pierwiastek z %d to %.2f\n", liczba, funkcja(pierwiastek, liczba));
+    return 0;
+}
+// 3.2.14
+int suma(int a, int b) {
+    return a + b;
+}
+
+int iloczyn(int a, int b) {
+    return a * b;
+}
+
+int porownaj_funkcje(int (*f1)(int, int), int (*f2)(int, int), int x, int y) {
+    return f1(x, y) == f2(x, y);
+}
+
+int main() {
+    printf("%d\n", porownaj_funkcje(suma, iloczyn, 2, 2));  // 4 == 4 -> 1
+    printf("%d\n", porownaj_funkcje(suma, iloczyn, 2, 3));  // 5 != 6 -> 0
+    return 0;
+}
+// 3.2.15
+void przepisz(const int *a, int *b) {
+    *b = *a;
+}
+
+int main() {
+    int x = 11, y = 0;
+    przepisz(&x, &y);
+    printf("y = %d\n", y);
+    return 0;
+}
+// 3.2.16
+void przepisz_odwrotnie(int *a, const int *b) {
+    *a = *b;
+}
+
+int main() {
+    int x = 0, y = 42;
+    przepisz_odwrotnie(&x, &y);
+    printf("x = %d\n", x);
+    return 0;
+}
+// 4.2.1
+void zad421a(int n, int tab[]) {
+    for (int i = 0; i < n; i++) tab[i] = 0;
+}
+
+void zad421b(int n, int tab[]) {
+    for (int i = 0; i < n; i++) tab[i] = i * 2;  // np. wartości parzyste
+}
+
+void zad421c(int n, int tab[]) {
+    for (int i = 0; i < n; i++) tab[i] *= 2;
+}
+
+void zad421d(int n, int tab[]) {
+    for (int i = 0; i < n; i++) tab[i] = abs(tab[i]);
+}
+
+void wypisz(int n, int tab[]) {
+    for (int i = 0; i < n; i++) printf("%d ", tab[i]);
+    printf("\n");
+}
+
+int main() {
+    int tab[5] = {1, -2, 3, -4, 5};
+
+    printf("Przed: "); wypisz(5, tab);
+    zad421d(5, tab);  // np. absolutna wartość
+    printf("Po 421d: "); wypisz(5, tab);
+
+    zad421a(5, tab);  // wyzeruj
+    printf("Po 421a: "); wypisz(5, tab);
+
+    zad421b(5, tab);  // indeks * 2
+    printf("Po 421b: "); wypisz(5, tab);
+
+    zad421c(5, tab);  // podwój wartości
+    printf("Po 421c: "); wypisz(5, tab);
+
+    return 0;
+}
+// 4.2.2
+double srednia(int n, int tab[]) {
+    int suma = 0;
+    for (int i = 0; i < n; i++) suma += tab[i];
+    return (double)suma / n;
+}
+
+int suma_elementow(int n, int tab[]) {
+    int suma = 0;
+    for (int i = 0; i < n; i++) suma += tab[i];
+    return suma;
+}
+
+int suma_kwadratow(int n, int tab[]) {
+    int suma = 0;
+    for (int i = 0; i < n; i++) suma += tab[i] * tab[i];
+    return suma;
+}
+
+int main() {
+    int tab[4] = {1, 2, 3, 4};
+    printf("Średnia: %.2f\n", srednia(4, tab));
+    printf("Suma: %d\n", suma_elementow(4, tab));
+    printf("Suma kwadratów: %d\n", suma_kwadratow(4, tab));
+    return 0;
+}
+// 4.2.3
+double srednia_const(int n, const int tab[]) {
+    int suma = 0;
+    for (int i = 0; i < n; i++) suma += tab[i];
+    return (double)suma / n;
+}
+
+int main() {
+    const int tab[] = {10, 20, 30};
+    printf("Średnia: %.2f\n", srednia_const(3, tab));
+    return 0;
+}
+// 4.2.4
+double srednia_geometryczna(int n, const unsigned int tab[]) {
+    double iloczyn = 1.0;
+    for (int i = 0; i < n; i++) iloczyn *= tab[i];
+    return pow(iloczyn, 1.0 / n);
+}
+
+int main() {
+    unsigned int tab[] = {2, 8};
+    printf("Średnia geometryczna: %.2f\n", srednia_geometryczna(2, tab));
+    return 0;
+}
+// 4.2.5
+int najwieksza_pierwsza_mniejsza_od(int n) {
+    bool *czy_pierwsza = malloc(n * sizeof(bool));
+    for (int i = 2; i < n; i++) czy_pierwsza[i] = true;
+
+    for (int i = 2; i * i < n; i++) {
+        if (czy_pierwsza[i]) {
+            for (int j = i * i; j < n; j += i)
+                czy_pierwsza[j] = false;
+        }
+    }
+
+    for (int i = n - 1; i >= 2; i--) {
+        if (czy_pierwsza[i]) {
+            free(czy_pierwsza);
+            return i;
+        }
+    }
+
+    free(czy_pierwsza);
+    return -1;
+}
+
+int main() {
+    int n = 20;
+    printf("Największa liczba pierwsza < %d to %d\n", n, najwieksza_pierwsza_mniejsza_od(n));
+    return 0;
+}
+// 4.2.6
+void zad426a(int n, int tab1[], int tab2[]) {
+    for (int i = 0; i < n; i++) tab2[i] = tab1[i];
+}
+
+void zad426b(int n, int tab1[], int tab2[]) {
+    for (int i = 0; i < n; i++) tab2[i] = tab1[n - 1 - i];
+}
+
+int main() {
+    int tab1[5] = {1, 2, 3, 4, 5};
+    int tab2[5];
+
+    zad426a(5, tab1, tab2);
+    printf("tab2 (kopiowanie): ");
+    for (int i = 0; i < 5; i++) printf("%d ", tab2[i]);
+    printf("\n");
+
+    zad426b(5, tab1, tab2);
+    printf("tab2 (odwrócenie): ");
+    for (int i = 0; i < 5; i++) printf("%d ", tab2[i]);
+    printf("\n");
+
+    return 0;
+}
+// 4.2.7
+void suma(int n, int tab1[], int tab2[], int tab3[]) {
+    for (int i = 0; i < n; i++) tab3[i] = tab1[i] + tab2[i];
+}
+
+void maksimum(int n, int tab1[], int tab2[], int tab3[]) {
+    for (int i = 0; i < n; i++) tab3[i] = (tab1[i] > tab2[i]) ? tab1[i] : tab2[i];
+}
+
+void przepisz(int n, int tab1[], int tab2[], int tab3[]) {
+    for (int i = 0; i < n; i++) {
+        tab1[i] = tab2[i];
+        tab2[i] = tab3[i];
+        tab3[i] = tab1[i];  // po przepisaniu
+    }
+}
+
+int main() {
+    int tab1[4] = {1, 3, 5, 7};
+    int tab2[4] = {2, 2, 6, 6};
+    int tab3[4];
+
+    suma(4, tab1, tab2, tab3);
+    printf("Suma: ");
+    for (int i = 0; i < 4; i++) printf("%d ", tab3[i]);
+    printf("\n");
+
+    maksimum(4, tab1, tab2, tab3);
+    printf("Maksimum: ");
+    for (int i = 0; i < 4; i++) printf("%d ", tab3[i]);
+    printf("\n");
+
+    przepisz(4, tab1, tab2, tab3);
+    printf("Po przepisaniu: tab1: ");
+    for (int i = 0; i < 4; i++) printf("%d ", tab1[i]);
+    printf("\n");
+
+    return 0;
+}
+// 4.2.8
+void zad428a(int n, double tab1[], double tab2[], double tab3[]) {
+    for (int i = 0; i < n; i++) {
+        tab3[i] = tab1[i];
+        tab3[n + i] = tab2[i];
+    }
+}
+
+void zad428b(int n, double tab1[], double tab2[], double tab3[]) {
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0)
+            tab3[i] = tab1[i];
+        else
+            tab3[i] = tab2[i];
+    }
+}
+
+int main() {
+    double tab1[4] = {1.1, 2.2, 3.3, 4.4};
+    double tab2[4] = {5.5, 6.6, 7.7, 8.8};
+    double tab3[8];
+
+    zad428a(4, tab1, tab2, tab3);
+    printf("tab3 (łącznie): ");
+    for (int i = 0; i < 8; i++) printf("%.1f ", tab3[i]);
+    printf("\n");
+
+    zad428b(4, tab1, tab2, tab3);
+    printf("tab3 (naprzemiennie): ");
+    for (int i = 0; i < 4; i++) printf("%.1f ", tab3[i]);
+    printf("\n");
+
+    return 0;
+}
+// 4.2.9
+void sortuj_trzy(int *a, int *b, int *c) {
+    int temp;
+    if (*a > *b) { temp = *a; *a = *b; *b = temp; }
+    if (*b > *c) { temp = *b; *b = *c; *c = temp; }
+    if (*a > *b) { temp = *a; *a = *b; *b = temp; }
+    // Po tej funkcji: *a = najmniejsza, *b = środkowa, *c = największa
+}
+
+void przetworz_tablice(int n, int tab1[], int tab2[], int tab3[]) {
+    for (int i = 0; i < n; i++) {
+        int a = tab1[i];
+        int b = tab2[i];
+        int c = tab3[i];
+
+        sortuj_trzy(&a, &b, &c);
+
+        tab1[i] = c;  // największa
+        tab2[i] = b;  // środkowa
+        tab3[i] = a;  // najmniejsza
+    }
+}
+
+int main() {
+    int tab1[] = {4, 8, 2};
+    int tab2[] = {7, 5, 3};
+    int tab3[] = {6, 9, 1};
+    int n = 3;
+
+    przetworz_tablice(n, tab1, tab2, tab3);
+
+    printf("tab1 (największe): ");
+    for (int i = 0; i < n; i++) printf("%d ", tab1[i]);
+    printf("\n");
+
+    printf("tab2 (średnie): ");
+    for (int i = 0; i < n; i++) printf("%d ", tab2[i]);
+    printf("\n");
+
+    printf("tab3 (najmniejsze): ");
+    for (int i = 0; i < n; i++) printf("%d ", tab3[i]);
+    printf("\n");
+
+    return 0;
+}
